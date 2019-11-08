@@ -1,0 +1,56 @@
+.index-cocktail {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.index-cocktail-wrapper {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.title {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  transition: opacity .5s;
+
+  .container {
+    top: 45vh;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.image {
+height: 100%;
+display: flex;
+align-items:center;
+}
+
+.col .image-a {
+  display: inline-block;
+  width: 80%;
+  height: 70vh;
+  .image-wrapper {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+}
+

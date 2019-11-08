@@ -1,0 +1,28 @@
+<% @cocktails.each do |cocktail| %>
+<% color = "##{SecureRandom.hex(3)}" %>
+  <div class="index" style="background-color:<%= color %>;">
+    <div class="index-cocktail">
+      <div class="index-cocktail-wrapper">
+
+        <div class="title">
+          <div class="container">
+            <div class="col col--24">
+              <h1><%= link_to cocktail.name, cocktail_path(cocktail), style: "color:#{color}"  %></h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="image">
+          <div class="container">
+            <div class="col col--24" style="display: flex; justify-content: center; align-items: center;">
+            <%= link_to cocktail_path(cocktail), class: "image-a" do  %>
+              <div class="image-wrapper" style="background-image: url(<%= cocktail.image_url %>); "></div>
+            <% end %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<% end %>
