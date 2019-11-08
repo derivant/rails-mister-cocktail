@@ -1,0 +1,45 @@
+.image-show {
+display: flex;
+align-items: center;
+}
+
+.image-a {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    height: 50%;
+
+  .image-wrapper-show {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+.title-show {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 5px;
+}
+
+  h1 a {
+    font-family: 'LocalGothic';
+    font-size: 78px;
+    color:white;
+    mix-blend-mode: difference;
+  }
+
+  .container-show {
+    top: 40vh;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+  }

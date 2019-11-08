@@ -1,0 +1,36 @@
+h3 {
+  text-align: center;
+  font-family: LocalGothic;
+  font-size: 24px;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+h5 {
+  text-align: center;
+  font-family: NewCenturySchlbkLTStd-Roman;
+  font-size: 24px;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+h6 {
+  text-align: center;
+  font-family: NewCenturySchlbkLTStd-Roman;
+  font-size: 16px;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+
+.ingredient-block {
+  display:flex;
+  height:40px;
+  align-items: flex-end;
+}
+
+.dose {
+  display:flex;
+  flex-grow: 1;
+  padding-left: 10px;
+}

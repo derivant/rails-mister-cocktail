@@ -1,1 +1,13 @@
-<%= render 'form' %>
+<% color = "##{SecureRandom.hex(3)}" %>
+<div class="index">
+  <div style="background-color:<%= color %>;">
+    <div class="index">
+      <div class="row justify-content-center" style="height:100vh">
+        <div class="col-3" style="margin-top:80px">
+
+          <%= render 'form' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

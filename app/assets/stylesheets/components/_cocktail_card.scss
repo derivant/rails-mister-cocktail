@@ -1,3 +1,12 @@
+// @font-face {
+//    font-family: 'New Century Gothic';
+//    src: url('/fonts/NewCenturySchlbkLTStd-Roman.woff')
+// }
+
+.index {
+  padding-bottom: 75px;
+}
+
 .index-cocktail {
   position: relative;
   z-index: 0;
@@ -27,8 +36,14 @@
   text-align: center;
   transition: opacity .5s;
 
+
+  h1 a {
+    font-family: 'LocalGothic';
+    font-size: 78px;
+  }
+
   .container {
-    top: 45vh;
+    top: 44vh;
     position: sticky;
     left: 0;
     width: 100%;
@@ -46,11 +61,19 @@ align-items:center;
   display: inline-block;
   width: 80%;
   height: 70vh;
+
   .image-wrapper {
     height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;
+
+    &:hover {
+    -webkit-animation: vibrate-3 0.5s linear both;
+            animation: vibrate-3 0.5s linear both;
+    }
   }
 }
+
+
 

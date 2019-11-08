@@ -6,11 +6,20 @@ $body-font: "Open Sans", "Helvetica", "sans-serif";
 $headers-font: "Raleway", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+@font-face {
+  font-family: "LocalGothic";
+  src: url(asset-path('LocalGothic.woff') format("woff"));
+  src: font-url('LocalGothic.woff?#iefix') format('embedded-opentype'),
+       font-url('LocalGothic.woff') format('woff'),
+       font-url('LocalGothic.ttf') format('truetype')
+}
+$my-font: "LocalGothic";
+
+@font-face {
+  font-family: "NewCenturySchlbkLTStd-Roman";
+  src: url(asset-path('NewCenturySchlbkLTStd-Roman.woff') format("woff"));
+  src: font-url('NewCenturySchlbkLTStd-Roman.woff?#iefix') format('embedded-opentype'),
+       font-url('NewCenturySchlbkLTStd-Roman.woff') format('woff'),
+       font-url('NewCenturySchlbkLTStd-Roman.ttf') format('truetype')
+}
+$my-font: "NewCenturySchlbkLTStd-Roman";

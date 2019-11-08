@@ -1,0 +1,48 @@
+.plus {
+  display:flex;
+  justify-content:flex-end;
+  h1 {
+    color: white;
+    mix-blend-mode: difference;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+    font-family: LocalGothic;
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid;
+    border-radius: 50px;
+    padding: 2px 12px;
+
+  &:hover {
+    color: white;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: screen;
+    }
+
+  }
+}
+
+.delete {
+  display:flex;
+  justify-content:center;
+  h1 {
+    color: white;
+    mix-blend-mode: difference;
+    font-family: LocalGothic;
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid;
+    border-radius: 50px;
+    padding: 2px 12px;
+    margin-bottom: 30px;
+
+  &:hover {
+    color: white;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: screen;
+    }
+
+  }
+}

@@ -10,7 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= link_to root_path do %>
+        <div class="logo">
+          <h1>HolY COCktaILS</h1>
+        </div>
+    <% end %>
+      <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>

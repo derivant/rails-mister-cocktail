@@ -1,16 +1,62 @@
-<h1>  <%= @cocktail.name %> </h1>
+<% color = "##{SecureRandom.hex(3)}" %>
 
-<% @cocktail.doses.each do |dose| %>
-<h4>  <%= dose.ingredient.name %> </h4>
-<h4>  <%= dose.description %> </h4>
-      <%= link_to "Delete ingredient", dose_path(dose), class: "text-danger ml-3",
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
+<div class="index" style="background-color:<%= color %>;">
+    <div class="container">
+          <div class="container" style="padding-top: 80px;">
+            <div class="col" style="display: flex; justify-content: center; align-items: center;">
+            <%= link_to cocktail_path(@cocktail), class: "image-a" do  %>
+              <% if @cocktail.photo? %>
+                <div class="image-wrapper-show" style="background-image: url(<%= cl_image_path @cocktail.photo%>); "></div>
+              <% elsif @cocktail.image_url? %>
+                <div class="image-wrapper-show" style="background-image: url(<%= cl_image_path @cocktail.image_url%>); "></div>
+              <% else %>
+                <div class="image-wrapper-show" style="background-image: url('http://blommers-schumm.com/portfolio_new/128SelfServiceStill102.jpg'); "></div>
+              <% end %>
+            <% end %>
 
-<% end %>
+            </div>
+          </div>
 
-<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail)  %>
-<%= link_to "← Back to all cocktails", root_path  %>
+            <div class="title-show">
+                <div class="col">
+                  <h1><%= link_to @cocktail.name, cocktail_path(@cocktail), style: "color:white"  %></h1>
+                </div>
+            </div>
 
-<%= render './doses/form' %>
+            <%= link_to cocktail_path(@cocktail), method: :delete do %>
+              <div class="delete">
+                <h1>Delete COCktaIL</h1>
+              </div>
 
+            <% end %>
+
+        </div>
+
+        <div class="container">
+              <div class="row justify-content-around">
+                <div class="col-5">
+                  <h3> Ingredients </h3>
+                    <% @cocktail.doses.each do |dose| %>
+                      <div class="ingredient-block">
+                        <div class="ingredient">
+                          <h5>  <%= dose.ingredient.name %> </h5>
+                        </div>
+                        <div class="dose">
+                          <h6>  <%= dose.description %> </h6>
+                        </div>
+                          <%= link_to dose_path(dose),
+                                  method: :delete do %>
+                            <h6>Delete ingredient</h6>
+                          <% end %>
+                      </div>
+                    <% end %>
+                </div>
+
+                 <div class="col-3">
+                  <h3> Add ingredient </h3>
+                    <%= render './doses/form' %>
+                </div>
+              </div>
+        </div>
+
+  </div>
